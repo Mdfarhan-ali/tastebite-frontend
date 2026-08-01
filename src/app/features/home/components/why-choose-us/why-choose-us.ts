@@ -22,7 +22,7 @@ export class WhyChooseUs {
     {
       icon: '👨‍🍳',
       title: 'Expert Chefs',
-      description: 'Our experienced chefs prepare every meal with passion.'
+      description: 'Delicious Meals, Expertly Crafted.'
     },
     {
       icon: '🥗',
