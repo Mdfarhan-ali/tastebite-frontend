@@ -1,0 +1,76 @@
+<nav class="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
+  <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+
+    <!-- Logo -->
+    <a routerLink="/" class="text-3xl font-bold text-red-600">
+      TasteBite
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="hidden items-center gap-8 md:flex">
+      @for (item of navigation; track item.route) {
+        <li>
+          <a
+            [routerLink]="item.route"
+            routerLinkActive="text-red-600 font-semibold"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="transition hover:text-red-600">
+
+            {{ item.label }}
+
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- Right Side -->
+    <div class="hidden items-center gap-4 md:flex">
+
+      <button
+        class="rounded-lg border border-red-600 px-5 py-2 text-red-600 transition hover:bg-red-600 hover:text-white">
+
+        Login
+
+      </button>
+
+      <button
+        class="rounded-lg bg-red-600 px-5 py-2 text-white transition hover:bg-red-700">
+
+        Reserve Table
+
+      </button>
+
+    </div>
+
+    <!-- Mobile Button -->
+    <button
+      class="md:hidden"
+      (click)="toggleMenu()">
+
+      ☰
+
+    </button>
+
+  </div>
+
+  @if(isMenuOpen()) {
+
+    <div class="border-t bg-white md:hidden">
+
+      @for(item of navigation; track item.route) {
+
+        <a
+          [routerLink]="item.route"
+          class="block border-b px-6 py-4">
+
+          {{ item.label }}
+
+        </a>
+
+      }
+
+    </div>
+
+  }
+
+</nav>

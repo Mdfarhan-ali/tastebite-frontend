@@ -1,0 +1,38 @@
+<section class="py-24">
+
+    <app-container>
+
+        <div class="mb-16 text-center">
+
+            <span class="text-sm font-semibold uppercase tracking-[0.3em] text-red-600">
+                Why Choose Us
+            </span>
+
+            <h2 class="mt-4 text-5xl font-bold text-gray-900">
+                Experience The Difference
+            </h2>
+
+            <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
+                Every dish is prepared with love, fresh ingredients,
+                and exceptional service that makes every visit memorable.
+            </p>
+
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+            @for(feature of features; track feature.title){
+
+            <app-feature-card
+                [icon]="feature.icon"
+                [title]="feature.title"
+                [description]="feature.description">
+            </app-feature-card>
+
+            }
+
+        </div>
+
+    </app-container>
+
+</section>
