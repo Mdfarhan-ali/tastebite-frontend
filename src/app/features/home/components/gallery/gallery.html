@@ -1,0 +1,41 @@
+<section class="bg-white py-24">
+
+  <app-container>
+
+    <div class="mb-16 text-center">
+
+      <span class="text-sm font-semibold uppercase tracking-[0.3em] text-red-600">
+        Gallery
+      </span>
+
+      <h2 class="mt-4 text-5xl font-bold">
+        Delicious Moments
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
+        A glimpse of our delicious food and beautiful restaurant.
+      </p>
+
+    </div>
+
+    <div class="grid grid-cols-2 gap-6 md:grid-cols-3">
+
+      @for(image of images; track image){
+
+      <div
+        class="overflow-hidden rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl">
+
+        <img
+          [src]="image"
+          alt="Gallery"
+          class="h-72 w-full object-cover transition duration-500 hover:scale-110">
+
+      </div>
+
+      }
+
+    </div>
+
+  </app-container>
+
+</section>
