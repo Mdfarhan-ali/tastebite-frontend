@@ -6,10 +6,12 @@ import { SpecialOffer } from "../../components/special-offer/special-offer";
 import { OurChefs } from "../../components/our-chefs/our-chefs";
 import { Gallery } from "../../components/gallery/gallery";
 import { ReservationCta } from "../../components/reservation-cta/reservation-cta";
+import { Testimonials } from "../../components/testimonials/testimonials";
+import { LatestBlogs } from "../../components/latest-blogs/latest-blogs";
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, WhyChooseUs, PopularDishes, SpecialOffer, OurChefs, Gallery, ReservationCta],
+  imports: [Hero, WhyChooseUs, PopularDishes, SpecialOffer, OurChefs, Gallery, ReservationCta, Testimonials, LatestBlogs],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

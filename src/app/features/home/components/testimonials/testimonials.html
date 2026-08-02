@@ -1,0 +1,43 @@
+<section class="bg-gray-50 py-24">
+
+  <app-container>
+
+    <div class="mb-16 text-center">
+
+      <span class="text-sm font-semibold uppercase tracking-[0.3em] text-red-600">
+        Testimonials
+      </span>
+
+      <h2 class="mt-4 text-5xl font-bold">
+        What Our Customers Say
+      </h2>
+
+    </div>
+
+    <div class="grid gap-8 lg:grid-cols-3">
+
+      @for(item of testimonials; track item.name){
+
+      <div class="rounded-2xl bg-white p-8 shadow-md">
+
+        <div class="mb-4 text-yellow-500">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p class="text-gray-600 italic">
+          "{{ item.review }}"
+        </p>
+
+        <h4 class="mt-6 font-bold">
+          {{ item.name }}
+        </h4>
+
+      </div>
+
+      }
+
+    </div>
+
+  </app-container>
+
+</section>
